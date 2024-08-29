@@ -1,0 +1,78 @@
+What is a Need of java 8?
+sol
+The main purpose of java 8 feature is to make a code consise or readable.and
+to enable the functional programing in oops and enbale the parallel processing.
+
+Feature of Java 8
+1-> Lambda Expression
+2-> Stream Api
+3-> Data and Time Api
+4-> Method reference and Constructor reference
+5-> Functional interface
+
+
+
+
+
+What is Lambda Expression?
+Ans: The lambda expression is a ananomas function or method. It is used to concise the code or reduce the size of code make it more interactive.
+
+Step to make any function Lambda expression ?
+The Lambda Expression has no return type.
+The lambda Expression has no specifier.
+The lambda expression has no name.
+It has only arrow ()->.
+
+Normal function :
+
+Public int add(int a , int b )
+{
+return a+b;
+}
+
+Lambda expression 
+
+(int a,int b ) -> { return a+b;}
+
+
+
+Important Point :
+
+1. If the body has one statement we can remove curly braces 
+
+Public int strlength(String str){
+return str.length();
+}
+
+Lambda expression 
+
+(String str)-> return str.length();
+
+
+2. Use type inference , compiler guess the satiation and context
+
+Public int add(int a , int b )
+{
+return a+b;
+}
+
+Lambda expression 
+
+(int a,int b ) -> { return a+b;}
+
+Type inference 
+(a,b ) -> { return a+b;}
+
+3. No return keyword
+if in lamda expression only contain one parameter so we can remove return statement
+(str)-> str.length();
+
+Benifits of Lambda Expression
+1. To enable the functional programming in java
+2. To make code more readable and consise
+3. JAR file reduction
+4. To Enable paralle processing
+5. Elimination of shadow variable
+
+->we can use the lambda expression with the collection frame work,
+->we can also use with multithreading

@@ -1,0 +1,14 @@
+What is Object Class?
+Sol-
+The Object class is the most basic and fundamental class in Java. Every other class in Java automatically inherits from the Object class. Here’s a simple explanation of its main features:
+1.	Universal Parent Class: All classes in Java are directly or indirectly derived from the Object class. This means that methods defined in Object are available to all Java objects.
+2.	Common Methods:
+
+ The Object class provides several key methods that all Java objects can use:
+ •	equals(Object obj): Checks if two objects are equal.
+ •	hashCode(): Returns a hash code for the object, used in hashing algorithms and data structures like HashMap.
+ •	toString(): Returns a string representation of the object.
+ •	clone(): Creates and returns a copy of the object.
+ •	finalize(): Called by the garbage collector before the object is destroyed.
+ •	getClass(): Returns the runtime class of the object.
+ •	notify(), notifyAll(), wait(), wait(long timeout), wait(long timeout, int nanos): Methods for thread synchronization.

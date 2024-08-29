@@ -1,0 +1,53 @@
+What is SuperKey Word?
+sol:
+In Java, the super keyword is used to refer to the immediate parent class object. 
+It can be used to access or invoke the parent class methods and constructors, 
+as well as to access parent class variables.
+
+Here are its key uses:
+
+Accessing Parent Class Members: You can use super to access methods and variables of the parent class when there is a method or variable with the same name 
+in the child class. This helps in distinguishing between the parent and child class members.
+
+Invoking Parent Class Constructor: super() is used to invoke the parent class constructor from the child class constructor.
+It must be the first statement in the child class constructor.
+
+Accessing Parent Class Instance Variables: When a child class hides a parent class variable, you can use super to access the hidden
+instance variable of the parent class.
+
+super helps in maintaining the relationship between parent and child classes in Java, enabling inheritance and allowing you to access and control
+parent class behavior within the child class context.
+
+Overall, the super keyword is a powerful tool for subclassing in Java, allowing subclasses to inherit and build upon the functionality of their parent classes.
+
+
+super is not required to call a superclass method: 
+While it is possible to use the super keyword to call a method in the parent class, it is not required. 
+If a method is not overridden in the subclass, then calling it without the super keyword will invoke the parent class’s implementation.
+// Parent class
+class Parent {
+    void display() {
+        System.out.println("Parent's display method");
+    }
+}
+
+// Subclass extending Parent
+class Child extends Parent {
+    // No overriding of the display method
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Child child = new Child();
+
+        // Calling display method from the subclass
+        child.display();  // Output: Parent's display method
+    }
+}
+
+Use of super keyword in Java
+
+It is majorly used in the following contexts as mentioned below:
+>Use of super with Variables
+>Use of super with Methods
+>Use of super with Constructors

@@ -1,0 +1,125 @@
+What is interface?
+sol:
+The interface in Java is a mechanism to achieve abstraction.
+There can be only abstract methods in the Java interface, not the method body. 
+It is used to achieve abstraction and multiple inheritances in Java using Interface. 
+In other words, you can say that interfaces can have abstract methods and variables. 
+It cannot have a method body. Java Interface also represents the IS-A relationship.
+
+Syntax for Java Interfaces
+
+interface {
+    // declare constant fields
+    // declare methods that abstract 
+    // by default.   
+}
+
+To declare an interface, use the interface keyword. It is used to provide total abstraction. 
+That means all the methods in an interface are declared with an empty body and are public 
+and all fields are public, static, and final by default. 
+
+if we declare a method private or protected in interface it give the compilation error.
+So it must to declare all the method public.But fro  java 8 we can define the private method or static method or defalut method
+
+
+*** Characteristics of an Interface: ***
+
+Total Abstraction:
+An interface provides total abstraction(100%), meaning it defines a contract without any implementation. The methods in an interface are just declarations; 
+they do not have bodies (i.e., they do not contain any code).
+
+Method Declarations:
+All methods in an interface are implicitly abstract, which means they are declared without an implementation (empty body).
+By default, all methods in an interface are public. You don't need to specify the public keyword, but it’s assumed.
+
+Fields:
+All fields (variables) in an interface are implicitly public, static, and final.
+public: The field can be accessed from outside the interface.
+static: The field belongs to the interface itself, not to any instance of the interface.
+final: The value of the field cannot be changed once it is initialized.
+
+More About Interface:
+
+In java we can not define interface as private.The access level of an interface is either public or package-private (default).
+This is because interfaces are meant to define a contract for other classes to implement, and restricting their visibility
+to private would prevent other classes from seeing and implementing them.
+
+In the interface we can define the static method and private or default method
+interface MathOperation {
+    //abstract method
+    int operate(int a, int b);
+
+    //static method
+    public static void add()
+    {
+        System.out.println("adding number");
+    }
+}
+Private Methods: Starting from Java 9, you can define private methods in interfaces.
+These methods are not visible to implementing classes or other interfaces and are used for internal implementation
+details within the interface itself.
+public interface MyInterface {
+    // Abstract method (implicitly public)
+    void publicMethod();
+
+    // Default method (implicitly public)
+    default void defaultMethod() {
+        System.out.println("Executing defaultMethod");
+        privateMethod();
+    }
+
+    // Private method (Java 9 and later)
+    private void privateMethod() {
+        System.out.println("Executing privateMethod");
+    }
+}
+public class MyClass implements MyInterface {
+    @Override
+    public void publicMethod() {
+        System.out.println("Implementing publicMethod");
+    }
+
+    public static void main(String[] args) {
+        MyClass obj = new MyClass();
+        obj.publicMethod();    // Output: Implementing publicMethod
+        obj.defaultMethod();   // Output: Executing defaultMethod, Executing privateMethod
+
+        // You cannot call privateMethod() directly from outside the interface
+        // obj.privateMethod();  // Compilation error: privateMethod() has private access in MyInterface
+    }
+}
+
+static method:
+In java we can define static method in the interface with theri body but we can not Override the static method.
+if we want to access the static method from the interface so we have to use the interface name.(dot)method name.
+We can make the main method as static 
+
+
+Access Modifiers with Interfaces in Java
+1. Public Interface
+
+	•	What it is: An interface that can be accessed from any other class in any package.
+	•	How to declare: Use the public keyword.
+	•	When to use: When the interface needs to be used by classes in different packages.
+
+    public interface MyInterface {
+    void myMethod();
+}
+
+
+2. Package-Private (Default) Interface
+	•	What it is: An interface that can only be accessed by classes within the same package.
+	•	How to declare: Do not use any access modifier; just declare the interface.
+	•	When to use: When the interface is only meant to be used within the same package.
+
+    interface MyPackagePrivateInterface {
+    void myMethod();
+}
+
+	->	Public Modifier:
+	•	Can be accessed from any other package.
+	•	Suitable for widely-used interfaces.
+
+	->	Default (Package-Private) Modifier:
+	•	Can only be accessed within the same package.
+	•	Suitable for internal interfaces that should not be exposed outside their package.

@@ -1,0 +1,66 @@
+What is Inheritance in java?
+Sol
+Java, Inheritance is an important pillar of OOP(Object-Oriented Programming). It is the mechanism in Java by 
+which one class is allowed to inherit the features(fields and methods) of another class. 
+In Java, Inheritance means creating new classes based on existing ones.
+A class that inherits from another class can reuse the methods and fields of that class. 
+
+
+Why Do We Need Java Inheritance?
+Code Reusability: The code written in the Superclass is common to all subclasses. Child classes can directly use the parent class code.
+Method Overriding: Method Overriding is achievable only through Inheritance. It is one of the ways by which Java achieves Run Time Polymorphism.
+Abstraction: The concept of abstract where we do not have to provide all details is achieved through inheritance.
+Abstraction only shows the functionality to the user.
+
+Important Terminologies Used in Java Inheritance
+
+Class: Class is a set of objects which shares common characteristics/ behavior and common properties/ attributes. 
+Class is not a real-world entity. It is just a template or blueprint or prototype from which objects are created.
+
+Super Class/Parent Class: The class whose features are inherited is known as a superclass(or a base class or a parent class).
+
+Sub Class/Child Class: The class that inherits the other class is known as a subclass(or a derived class, extended class, or child class).
+The subclass can add its own fields and methods in addition to the superclass fields and methods.
+
+Reusability: Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already 
+a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this,
+we are reusing the fields and methods of the existing class.
+
+**** important ****
+>Static methods can not be overridden.  
+ 
+>Final methods can not be overridden.  
+ 
+>Private methods can not be overridden.  
+ 
+>A constructor can not be overridden.
+ 
+
+ Single Inheritance:
+ When a class inherits another class, it is known as a single inheritance.
+
+ Multilevel Inheritance:
+ When there is a chain of inheritance, it is known as multilevel inheritance.
+
+
+
+Superclass and Subclass Relationship: example show in question 2
+
+In object-oriented programming, a subclass inherits the properties and methods from its superclass. To properly initialize these inherited properties,
+ the superclass constructor must be called.
+
+Constructor Requirements
+Superclass Constructor: When a class (subclass) inherits another class (superclass), and if the superclass has a parameterized constructor,
+the subclass must explicitly call the appropriate constructor of the superclass using the super keyword.
+
+No-Argument Constructor: If a class has no explicit constructors, Java provides a default no-argument constructor.
+If you define any constructor (parameterized or not) in a class, Java does not provide the default no-argument constructor.
+
+Multiple Inheritance in java?
+Sol:- Multiple inheritance is not allowed in java because it create a ambigutiy.
+Multiple Inheritance is a feature of an object-oriented concept, where a class can inherit properties of more than one parent class.
+The problem occurs when there exist methods with the same signature in both the superclasses and subclass. On calling the method, 
+the compiler cannot determine which class method to be called and even on calling which class method gets the priority. 
+
+let take a example we have to class A and B we same method . If we Make a third class that inherit the A and B and when you call the mehtod of so the 
+compiler give an error because it not determine which class method it has to call because both class has same mathod.

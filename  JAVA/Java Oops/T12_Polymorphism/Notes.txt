@@ -1,0 +1,184 @@
+What is Polymorohishm?
+Sol:
+The word “poly” means ->many<- and “morphs” means ->forms<- , So it means many forms.
+Polymorphism is considered one of the important features of Object-Oriented Programming.
+Polymorphism allows us to perform a single action in different ways.
+In other words, polymorphism allows you to define one interface and have multiple implementations.
+
+Types of Java Polymorphism
+
+In Java Polymorphism is mainly divided into two types: 
+>Compile-time Polymorphism
+>Runtime Polymorphism
+
+** Meaning of CompileTime **
+Compile time refers to the phase in software development when the source code is converted into executable code by a compiler.
+This is the period when the compiler checks the code for syntax errors, type checking, and other compile-time errors.
+If the code passes these checks, the compiler generates the bytecode or machine code that can be executed by a computer.
+Key Activities During Compile Time.
+
+Syntax Checking:
+The compiler checks the source code for syntax errors, ensuring that the code follows the language's grammatical rules.
+Type Checking:
+The compiler verifies that all the data types are used correctly and that type conversions are valid.
+
+Semantic Analysis:
+This involves checking for semantic errors, ensuring that the code makes sense and adheres to the language's semantic rules (e.g., variable declarations before use, proper method signatures, etc.).
+
+Code Optimization:
+The compiler may perform optimizations to improve the performance of the resulting executable code.
+
+Code Generation:
+The source code is translated into bytecode or machine code that can be executed by a computer or a virtual machine (e.g., JVM for Java).
+
+Error Reporting:
+If there are errors in the code, the compiler generates error messages to help the developer locate and fix the issues.
+
+** Compile-time Polymorphism **
+Compile-time polymorphism, also known as static polymorphism, is a type of polymorphism that is resolved during the compile time.
+It is achieved through method overloading and operator overloading in languages that support this feature (Java does not support operator overloading).
+
+Key Points of Compile-Time Polymorphism
+
+Method Overloading:
+This is the most common way to achieve compile-time polymorphism.
+It occurs when multiple methods in the same class have the same name but different parameters (different type, number, or both).
+The method to be called is determined at compile time based on the method signature.
+
+Operator Overloading:
+Some languages like C++ support operator overloading where operators are given new functionality for user-defined data types.
+Java does not support operator overloading.
+
+Static Binding:
+In compile-time polymorphism, the method call is resolved at compile time. This is known as static binding.
+The compiler determines the exact method to be called based on the method signature.
+
+public class Calculator {
+
+    // Method to add two integers
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    // Method to add three integers
+    public int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    // Method to add two double values
+    public double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        // Calls the method with two int parameters
+        System.out.println("Sum of 2 and 3: " + calc.add(2, 3));
+
+        // Calls the method with three int parameters
+        System.out.println("Sum of 1, 2, and 3: " + calc.add(1, 2, 3));
+
+        // Calls the method with two double parameters
+        System.out.println("Sum of 2.5 and 3.5: " + calc.add(2.5, 3.5));
+    }
+}
+Explanation
+
+Same Method Name:
+All methods are named add.
+
+Different Parameter Lists:
+add(int a, int b)
+add(int a, int b, int c)
+add(double a, double b)
+
+Compile-Time Decision:
+When you call calc.add(2, 3), the compiler selects the method add(int a, int b).
+When you call calc.add(1, 2, 3), the compiler selects the method add(int a, int b, int c).
+When you call calc.add(2.5, 3.5), the compiler selects the method add(double a, double b).
+The decision of which method to call is made during the compile time, based on the method signatures and the arguments passed.
+This is why it is called compile-time polymorphism.
+
+
+Runtime Polymorphism in Java
+
+It is also known as Dynamic Method Dispatch.
+It is a process in which a function call to the overridden method is resolved at Runtime.
+This type of polymorphism is achieved by Method Overriding. Method overriding, on the other hand,
+occurs when a derived class has a definition for one of the member functions of the base class. 
+
+// Java Program for Method Overriding
+
+// Class 1
+// Helper class
+class Parent {
+
+	// Method of parent class
+	void Print()
+	{
+
+		// Print statement
+		System.out.println("parent class");
+	}
+}
+
+// Class 2
+// Helper class
+class subclass1 extends Parent {
+
+	// Method
+	void Print() { System.out.println("subclass1"); }
+}
+
+// Class 3
+// Helper class
+class subclass2 extends Parent {
+
+	// Method
+	void Print()
+	{
+
+		// Print statement
+		System.out.println("subclass2");
+	}
+}
+
+// Class 4
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Creating object of class 1
+		Parent a;
+
+		// Now we will be calling print methods
+		// inside main() method
+
+		a = new subclass1();
+		a.Print();
+
+		a = new subclass2();
+		a.Print();
+	}
+}
+
+Subtype of Run-time Polymorphism
+
+Virtual functions
+It allows an object of a derived class to behave as if it were an object of the base class.
+The derived class can override the virtual function of the base class to provide its own implementation.
+The function call is resolved at runtime, depending on the actual type of the object.
+
+Advantages of Polymorphism in Java
+Increases code reusability by allowing objects of different classes to be treated as objects of a common class.
+Improves readability and maintainability of code by reducing the amount of code that needs to be written and maintained.
+Supports dynamic binding, enabling the correct method to be called at runtime, based on the actual class of the object.
+Enables objects to be treated as a single type, making it easier to write generic code that can handle objects of different types.
+
+Disadvantages of Polymorphism in Java
+Can make it more difficult to understand the behavior of an object, especially if the code is complex.
+This may lead to performance issues, as polymorphic behavior may require additional computations at runtime.

@@ -1,0 +1,17 @@
+What is Comprator?
+sol:
+In Java, a Comparator is a functional interface that defines a method for comparing two objects of the same type.
+It is used to provide custom comparison logic, which is particularly useful for sorting collections of objects.
+
+The Comparator conation only one abstract method called ** compare **;
+this method take two obejct to campare
+Syntax:
+public int (Object obj1, Object obj2); 
+return -1 if obj1 comes before obj2
+return 1 if obj1 comes  after obj2
+return 0 if obj1 and obj2 are equal
+
+
+In collection frame work if we want to do sorting so we can easly use the Comparator or Comprable.
+and we know that these are functional inference so we can easily use lambda expression with them,
+to consise the code.

@@ -1,0 +1,139 @@
+what is Method?
+
+1-> A method is a block of code which only runs when it is called.
+2-> You can pass data, known as parameters, into a method.
+3-> Methods are used to perform certain actions, and they are also known as functions.
+
+Why use methods?
+To reuse code: define the code once, and use it many times.
+
+
+what is MethodOverloading?
+Sol:-
+If a class has multiple methods having same name but different in parameters,
+it is known as Method Overloading.
+
+Advantage of method overloading
+Method overloading increases the readability of the program.
+
+Different ways to overload the method?
+
+There are two ways to overload the method in java
+By changing number of arguments
+By changing the data type
+
+/*
+ * Note->
+ * we can not give same name with same parameter
+ * or same name with same parameter with diffrent return type
+ */
+
+ Java provides some pre-defined methods, such as System.out.println()
+
+ Naming a Method
+
+While defining a method, remember that the method name must be a verb and start with a lowercase letter.
+If the method name has more than two words, the first name must be a verb followed by adjective or noun.
+In the multi-word method name, the first letter of each word must be in uppercase except the first word.
+For example:
+
+Single-word method name: sum(), area()
+Multi-word method name: areaOfCircle(), stringComparision()
+
+It is also possible that a method has the same name as another method name in the same class, it is known as method overloading.
+
+Types of Method
+
+There are two types of methods in Java:
+
+>Predefined Method
+>User-defined Method
+
+Predefined Method:
+In Java, predefined methods are the method that is already defined in the Java class libraries is known as predefined methods.
+It is also known as the standard library method or built-in method. We can directly use these methods just by calling them in 
+the program at any point. Some pre-defined methods are length(), equals(), compareTo(), sqrt(), etc.
+When we call any of the predefined methods in our program, a series of codes related to the corresponding 
+method runs in the background that is already stored in the library.
+
+Each and every predefined method is defined inside a class. Such as print() method is defined in the java.io.PrintStream class.
+It prints the statement that we write inside the method. For example, print("Java"), it prints Java on the console.
+
+***  Method Overriding: **
+
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+The overriding method in the subclass should have the same name, return type, and parameters as the method in the superclass.
+
+Key Points:
+>If the method in Super class is defined as the final we can not override in the subclass.
+>Used to provide specific implementation of a method that is already defined in its superclass.
+>The method in the subclass must have the same name, return type, and parameter list as the method in the superclass.
+>Allows runtime polymorphism.
+>Only instance methods (non-static methods) can be overridden.
+>The @Override annotation is often used to indicate that a method is intended to override a method in the superclass.
+
+Static Methods
+Static methods belong to the class itself rather than any particular instance of the class. 
+They can be called without creating an instance of the class. ***Static methods cannot be overridden*** because
+they are not associated with instances of the class. Instead, they can be hidden by another static method in a subclass,
+a concept known as "method hiding."
+
+Example of Overriding Instance Methods:
+class Animal {
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();
+        myDog.sound();  // Output: Dog barks
+    }
+}
+
+
+Example of Static Method Hiding:
+
+class Animal {
+    static void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    static void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal.sound();  // Output: Animal makes a sound
+        Dog.sound();     // Output: Dog barks
+
+        Animal myDog = new Dog();
+        myDog.sound();   // Output: Animal makes a sound
+    }
+}
+
+
+**** important ****
+>Static methods can not be overridden.  
+ 
+>Final methods can not be overridden.  
+ 
+>Private methods can not be overridden.  
+ 
+>A constructor can not be overridden.
+In Java, constructors cannot be overridden because they are not inherited like regular methods.
+However, you can achieve similar behavior through constructor chaining, where a subclass constructor
+calls a superclass constructor.
+ 

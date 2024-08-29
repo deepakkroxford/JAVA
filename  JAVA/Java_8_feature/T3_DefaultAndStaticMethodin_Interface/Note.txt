@@ -1,0 +1,87 @@
+we can define static , default , and private method inside the interface.
+But we can not define the finally method 
+
+Need Of defalut Mehtod:
+Default methods in Java interfaces were introduced in Java 8 to provide a way to add new functionality to interfaces without 
+breaking existing implementations. Here are the key reasons why default methods are useful:
+
+1. Backward Compatibility
+
+Before Java 8, interfaces could only declare abstract methods, which meant that adding a new method to an existing interface 
+would break all classes that implemented that interface. Default methods allow interfaces to provide a default implementation 
+for methods, which means that existing classes that implement the interface do not need to provide an implementation for the new method.
+
+// Java 7 style interface
+interface MyInterface {
+    void method1();
+    // Adding a new method in Java 7 would break existing implementations
+}
+
+// Java 8 style interface with default method
+interface MyInterface {
+    void method1();
+    
+    default void newMethod() {
+        // Default implementation
+    }
+}
+
+
+2. Interface Evolution
+
+Default methods enable interfaces to evolve over time by allowing new methods to be added without forcing all implementing classes to provide
+an implementation immediately.
+This is particularly useful for extending existing interfaces in libraries and frameworks without causing disruption to users.
+
+
+3. Code Reuse
+
+Default methods allow interface designers to provide common utility methods that can be used by all implementing classes.
+This promotes code reuse and reduces the duplication of code across multiple implementing classes.
+interface Calculatable {
+    default int add(int a, int b) {
+        return a + b;
+    }
+    
+    default int subtract(int a, int b) {
+        return a - b;
+    }
+}
+
+class Calculator implements Calculatable {
+    // No need to implement add and subtract methods here,
+    // they are already provided by the default methods in Calculatable interface
+}
+
+4. Multiple Inheritance of Behavior
+
+Java does not support multiple inheritance of classes, but it does support multiple inheritance of interfaces.
+Default methods enable interfaces to inherit behavior (method implementations) from multiple interfaces, which helps in creating more modular and reusable code.
+interface A {
+    default void method() {
+        System.out.println("Method from interface A");
+    }
+}
+
+interface B {
+    default void method() {
+        System.out.println("Method from interface B");
+    }
+}
+
+class MyClass implements A, B {
+    // Error: MyClass inherits unrelated defaults for method() from A and B
+    // Need to override and provide a specific implementation
+    @Override
+    public void method() {
+        //or we can give our own implementastion
+        A.super.method(); // Call method from interface A
+        B.super.method(); // Call method from interface B
+    }
+}
+
+
+The main use of the default method is if there is more that one interface implement the one interface or herachicy of interface so we need to add the 
+some new functionality into one the interface class so we have to provide the implement in all interface class.
+Thats why we use the defalut method it not neccesry to provide it implementation
+

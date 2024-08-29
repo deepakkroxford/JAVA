@@ -1,0 +1,104 @@
+Java Threads
+Threads allows a program to operate more efficiently by doing multiple things at the same time.
+Threads can be used to perform complicated tasks in the background without interrupting the main program.
+
+
+Multithreading:-
+
+Multithreading in Java is a process of executing multiple threads simultaneously.
+A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.
+However, we use multithreading than multiprocessing because threads use a shared memory area. They don't allocate separate memory area so saves memory,
+and context-switching between the threads takes less time than process.
+Java Multithreading is mostly used in games, animation, etc.
+
+Advantages of Java Multithreading
+
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+2) You can perform many operations together, so it saves time.
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+
+Multitasking
+
+Multitasking is a process of executing multiple tasks simultaneously. We use multitasking to utilize the CPU.
+
+Multitasking can be achieved in two ways:
+>Process-based Multitasking (Multiprocessing)
+>Thread-based Multitasking (Multithreading)
+
+1) Process-based Multitasking (Multiprocessing)
+Each process has an address in memory. In other words, each process allocates a separate memory area.
+A process is heavyweight.
+Cost of communication between the process is high.
+Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.
+
+2) Thread-based Multitasking (Multithreading)
+Threads share the same address space.
+A thread is lightweight.
+Cost of communication between the thread is low.
+
+Note: At least one process is required for each thread.
+Note: At a time one thread is executed only.
+
+Java Thread class
+
+Java provides Thread class to achieve thread programming.
+Thread class provides constructors and methods to create and perform operations on a thread.
+Thread class extends Object class and implements Runnable interface.
+
+Life cycle of a Thread (Thread States)
+
+In Java, a thread always exists in any one of the following states. These states are:
+New
+Active
+Blocked / Waiting
+Timed Waiting
+Terminated
+
+1. New
+A thread is in the “New” state when it is created but not yet started. At this point, the thread object is instantiated,
+but the start() method has not been called.
+Thread t = new Thread(new MyTask());
+
+2. Active
+
+The “Active” state is subdivided into two parts: Runnable and Running.
+Runnable: After the start() method is called, the thread moves to the “Runnable” state. A thread in this state is ready
+to run and is waiting for the CPU to become available.
+t.start();
+Running: When the thread scheduler picks the thread from the “Runnable” pool and assigns a CPU to it,
+the thread moves to the “Running” state and starts executing the run() method.
+
+
+Thread Schedular 
+-> The Thread Schedular is a part of Jvm (java virtual Machine)
+-> The working of the thread Schedular is to decide the which Thread is will execut and which thread is to wait.
+->In Java, a thread is only chosen by a thread scheduler if it is in the runnable state. 
+
+How thread Schedular decide which thread to pick?
+->If there is more than one thread in the runnable state, it is up to the thread scheduler to pick one of the threads and ignore the other ones.
+There are some criteria that decide which thread will execute first. There are two factors for scheduling a thread i.e. Priority and Time of arrival.
+
+Priority:
+Priority of each thread lies between 1 to 10. If a thread has a higher priority, it means that thread has got a better chance of getting picked
+up by the thread scheduler.
+
+Time of Arrival:
+Suppose two threads of the same priority enter the runnable state, then priority cannot be the factor to pick a thread from these two threads.
+In such a case, arrival time of thread is considered by the thread scheduler. A thread that arrived first gets the preference over the other threads.
+
+Which is better Extending the Thread Class Or Implements A Runnable Interface?
+sol->
+it is generally better to implement the Runnable interface. Here are some reasons why:
+
+Implementing Runnable Interface
+
+1.	Flexibility: By implementing Runnable, your class can extend another class if needed, allowing for more flexible design.
+
+2.	Separation of Concerns: It separates the task from the thread management, which can lead to cleaner code.
+     You can create a Runnable object and pass it to multiple Thread objects if needed.
+
+3.	Reusability: Runnable tasks can be reused by passing them to different threads or executors, making the code more modular and reusable.
+
+4.	Better for Thread Pools: When working with thread pools (such as with ExecutorService), you pass Runnable objects, 
+    not Thread objects, making Runnable a better choice for managing large numbers of tasks.

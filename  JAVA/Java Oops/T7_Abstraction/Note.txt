@@ -1,0 +1,120 @@
+What is Abstraction?
+Sol
+Abstraction in Java is the process in which we only show essential details/functionality to the user. 
+The non-essential implementation details are not displayed to the user. 
+
+Simple Example to understand Abstraction:
+Television remote control is an excellent example of abstraction. It simplifies the interaction with a TV by hiding the 
+complexity behind simple buttons and symbols, making it easy without needing to understand the technical details of how 
+the TV functions.
+
+***  Abstract keyword  ***
+The abstract keyword in Java is used in the declaration of classes and methods to define an abstract class or abstract method,
+respectively.
+
+** Abstract Class **
+An abstract class is a class that cannot be instantiated on its own and is designed to be subclassed. 
+It can include abstract methods (methods without implementation) that must be implemented by subclasses, 
+as well as concrete methods (methods with implementation).
+
+Abstract method:
+>An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), within an abstract class or interface.
+>Abstract methods can only be declared within abstract classes or interfaces. Abstract classes are declared with the abstract keyword.
+>Abstract methods do not have a body. They provide no functionality but set a contract for subclasses to implement the method.
+>Any subclass of an abstract class must either implement all abstract methods or be declared abstract itself.
+
+Concrete Subclass: A subclass that implements all abstract methods from its abstract superclass can be instantiated.
+
+Abstract Subclass: A subclass that does not implement all abstract methods from its abstract superclass must itself be declared abstract, 
+meaning it cannot be instantiated until all abstract methods are implemented in a further subclass.
+
+// Abstract class with two abstract methods
+abstract class Animal {
+    abstract void sound();
+    abstract void eat();
+}
+
+// Concrete subclass that implements all abstract methods
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Woof");
+    }
+    
+    @Override
+    void eat() {
+        System.out.println("Dog is eating");
+    }
+}
+
+// Abstract subclass that implements only one abstract method
+abstract class Bird extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Tweet");
+    }
+    // Bird does not implement eat(), so it remains abstract
+}
+
+// Concrete subclass of Bird that implements the remaining abstract method
+class Sparrow extends Bird {
+    @Override
+    void eat() {
+        System.out.println("Sparrow is eating");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // This will work because Dog is a concrete class
+        Dog myDog = new Dog();
+        myDog.sound(); // Output: Woof
+        myDog.eat();   // Output: Dog is eating
+
+        // This will also work because Sparrow is a concrete class
+        Sparrow mySparrow = new Sparrow();
+        mySparrow.sound(); // Output: Tweet
+        mySparrow.eat();   // Output: Sparrow is eating
+
+        // Bird cannot be instantiated because it is abstract
+        // Bird myBird = new Bird(); // This would cause a compilation error
+    }
+}
+
+
+Concreate method:
+A concrete method is a method in a class that has a complete implementation, meaning it has a body with actual code that defines 
+the behavior of the method. This is in contrast to abstract methods, which only have a method signature and no implementation.
+
+abstract class Shape {
+
+    // Concrete method
+    public void display() {
+        System.out.println("Displaying shape");
+    }
+    
+    // Abstract method
+    public abstract double area();
+}
+class Circle extends Shape {
+    private double radius;
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+    
+    // Implementing the abstract method
+    @Override
+    public double area() {
+        return Math.PI * radius * radius;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Circle circle = new Circle(5.0);
+        System.out.println("Area of the circle: " + circle.area());  // Output: Area of the circle: 78.53981633974483
+        circle.display();  // Output: Displaying shape
+    }
+}
+
+
+In abstract class we can also declarae a Constructor.

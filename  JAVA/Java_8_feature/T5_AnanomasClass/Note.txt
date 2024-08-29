@@ -1,0 +1,38 @@
+What  is a Anonymous class?
+ans-:
+An anonymous inner class in Java is a way to define a one-time-use class and instantiate it at the same time.
+Key Points:
+
+1.	No Class Name: It doesn’t have a name.
+2.	Single Use: Typically used for a one-time purpose.
+3.	Instantiation and Declaration Together: The class is declared and instantiated at the same place.
+4.	Can Extend a Class or Implement an Interface: Can be used to create a subclass or an implementation of an interface.
+
+**** Lambda expression Vs Ananomas inner class ***
+Lambda expressions and anonymous inner classes in Java each have their own strengths and use cases.
+Determining which is more “powerful” depends on the specific requirements and context of your code.
+
+When to Use Each
+
+	->	Use Lambda Expressions When:
+	•	You need to implement a functional interface.
+	•	You prefer more concise and readable code.
+	•	The implementation is short and straightforward.
+
+
+	->	Use Anonymous Inner Classes When:
+	•	You need to implement an interface with multiple methods.
+	•	You need to create a subclass of a class.
+	•	You require fields or additional methods within the class.
+	•	You need more flexibility that lambda expressions cannot provide.
+
+Lambda expressions are a powerful feature for simplifying the implementation of functional interfaces, providing more readable
+and concise code. However, anonymous inner classes are more flexible and can be used in a wider range of scenarios,
+including implementing interfaces with multiple methods or extending concrete classes.
+
+
+//Important
+
+Anonymous inner Class != Lambda Expression
+If anonymous inner class implement an interface that contain only one abstract method so we can repalce anonymous inner
+class with the lambda expression.

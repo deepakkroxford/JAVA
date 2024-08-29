@@ -1,0 +1,116 @@
+***  Method Overriding: **
+
+Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
+The overriding method in the subclass should have the same name, return type, and parameters as the method in the superclass.
+
+Key Points:
+>Used to provide specific implementation of a method that is already defined in its superclass.
+>The method in the subclass must have the same name, return type, and parameter list as the method in the superclass.
+>Allows runtime polymorphism.
+>Only instance methods (non-static methods) can be overridden.
+>The @Override annotation is often used to indicate that a method is intended to override a method in the superclass.
+
+** Static Methods **
+Static methods belong to the class itself rather than any particular instance of the class. 
+They can be called without creating an instance of the class. Static methods cannot be overridden because
+they are not associated with instances of the class. Instead, they can be hidden by another static method in a subclass,
+a concept known as "method hiding."
+
+Example of Static Method Hiding:
+
+class Animal {
+    static void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+class Dog extends Animal {
+    static void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal.sound();  // Output: Animal makes a sound
+        Dog.sound();     // Output: Dog barks
+
+        Animal myDog = new Dog();
+        myDog.sound();   // Output: Animal makes a sound
+    }
+}
+
+
+**** important ****
+>Static methods can not be overridden.  
+ 
+>Final methods can not be overridden.  
+ 
+>Private methods can not be overridden.  
+ 
+>A constructor can not be overridden.
+
+
+Can we Override The protected Method of Base Class.
+Yes, the protected method of a superclass can be overridden by a subclass. If the superclass method is protected,
+the subclass overridden method can have protected or public (but not default or private) which means the subclass 
+overridden method can not have a weaker access specifie
+
+***Rules for Java Method Overriding**
+
+1. Overriding and Access Modifiers
+The access modifier for an overriding method can allow more, but not less, access than the overridden method. 
+For example, a protected instance method in the superclass can be made public, but not private, in the subclass. 
+Doing so will generate a compile-time error. 
+
+2.Final methods can not be overridden
+If we don’t want a method to be overridden, we declare it as final. Please see Using Final with Inheritance. 
+
+3.Static methods can not be overridden(Method Overriding vs Method Hiding): 
+
+When you define a static method with the same signature as a static method in the base class, it is known as method hiding. 
+The following table summarizes what happens when you define a method with the same signature as a method in a super-class.
+
+ 	                      |  Superclass Instance Method	     |          Superclass Static Method
+                          |                                  |
+Subclass Instance Method  |	     Overrides           	     |     Generates a compile-time error
+                          |                                  |
+Subclass Static Method	  | Generates a compile-time error   |	           Hides
+
+Can we overload or override a static method in Java?
+If a class has multiple functions by the same name but different parameters, it is known as Method Overloading. 
+If a subclass provides a specific implementation of a method that is already provided by its parent class,
+it is known as Method Overriding.
+
+The static method is resolved at compile time cannot be overridden by a subclass. 
+An instance method is resolved at runtime can be overridden.
+A static method can be overloaded.
+
+class SuperClass {
+   public static void display() {
+      System.out.println("SuperClass.display()");
+   }
+
+   //Method overloading of static method
+   public static void display(int a) {
+      System.out.println("SuperClass.display(int): " + a);
+   }
+}
+
+class SubClass extends SuperClass {
+   //Not method overriding but hiding
+   public static void display() {
+      System.out.println("SubClass.display()");
+   }
+}
+
+public class Tester {
+   public static void main(String[] args) {
+      SuperClass object = new SubClass();
+
+      //SuperClass display method is called
+      //although object is of SubClass.
+      object.display();        
+      object.display(1);    
+   }
+}

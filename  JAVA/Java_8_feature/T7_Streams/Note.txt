@@ -1,0 +1,52 @@
+What is Stream Api?
+ans -
+Benefits
+
+•	Readable Code: The Stream API promotes writing more readable and expressive code by using a fluent programming style.
+•	Efficient Data Processing: Streams allow for efficient data processing using lazy evaluation and parallel execution.
+•	Functional Programming: The Stream API leverages functional programming concepts, making it easier to work with 
+    immutable data and perform side-effect-free computations.
+•	Concise: Streams reduce the need for boilerplate code, such as loops and conditional statements, by providing a rich set of operations.
+
+
+Stream Vs Collection
+Streams and collections are fundamental concepts in Java for handling data, but they serve different purposes and have distinct characteristics. Here’s a detailed comparison between streams and collections:
+
+Collections
+
+	1.	Purpose:
+	•	Collections are used to store and group data elements in a structured way, such as lists, sets, and maps.
+	•	They are primarily used for storage, retrieval, and manipulation of data.
+	2.	Data Storage:
+	•	Collections store data in-memory and provide various methods to add, remove, and access elements.
+	3.	Mutability:
+	•	Collections are generally mutable, allowing modifications to the stored data (e.g., adding or removing elements).
+	4.	Eager Evaluation:
+	•	Operations on collections are performed eagerly. When you call a method on a collection, it is executed immediately.
+	5.	Iteration:
+	•	Collections support external iteration using loops (e.g., for loop, iterator).
+	6.	API Examples:
+	•	List, Set, Map, ArrayList, HashSet, HashMap.
+
+Streams
+
+	1.	Purpose:
+	•	Streams are used to perform complex data processing operations on sequences of elements in a functional-style manner.
+	•	They are primarily used for querying, transforming, and processing data.
+
+	2.	Data Flow:
+	•	Streams do not store data. Instead, they operate on data provided by a source (e.g., a collection, array, or I/O channel)
+         and produce a pipeline of transformations.
+
+	3.	Immutability:
+	•	Streams are immutable. Operations on a stream produce a new stream without modifying the original source.
+
+	4.	Lazy Evaluation:
+	•	Stream operations are lazy. Intermediate operations are not executed until a terminal operation is invoked, allowing for optimization
+         and efficient data processing.
+
+	5.	Internal Iteration:
+	•	Streams use internal iteration, where the library handles the iteration for you. This allows for more readable and declarative code.
+    
+	6.	API Examples:
+	•	Stream, IntStream, DoubleStream, Collectors.
