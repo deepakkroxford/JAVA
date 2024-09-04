@@ -4,9 +4,11 @@ class A {
     public void methodA() {
         System.out.println("method of a class");
     }
+    
 }
 
 class B extends A {
+   
     public void methodB() {
         System.out.println("method of B class");
     }
@@ -18,6 +20,7 @@ class C extends B {
     public void methodC() {
         System.out.println("method of C class");
     }
+
 }
 
 

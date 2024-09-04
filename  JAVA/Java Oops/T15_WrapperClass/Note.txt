@@ -1,9 +1,11 @@
 Need Of Wrapper Class
-1.Conversion Between Primitive Types and Objects: Wrapper classes encapsulate primitive data types (like int, float, boolean) into objects. This allows these primitive types to be used in contexts where objects are required,
+1.Conversion Between Primitive Types and Objects: Wrapper classes encapsulate primitive data types (like int, float, boolean) into objects.
+This allows these primitive types to be used in contexts where objects are required,
 such as in collections (like ArrayList) or when dealing with generics.
 
 2.Nullability:
-Unlike primitive types, wrapper classes can hold null values. This is useful when you need to represent absence of a value in situations where primitives cannot hold null.
+Unlike primitive types, wrapper classes can hold null values.
+This is useful when you need to represent absence of a value in situations where primitives cannot hold null.
 
 3.Methods and Utility:
 Wrapper classes provide methods to perform various utility operations on the underlying primitive types.

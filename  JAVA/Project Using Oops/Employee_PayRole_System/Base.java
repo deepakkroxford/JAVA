@@ -116,6 +116,7 @@ public class Base {
      payrollSystem.display();
      payrollSystem.removeEmployee(2);
      payrollSystem.display();
+     
 
     }
 }

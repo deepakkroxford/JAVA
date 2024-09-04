@@ -7,7 +7,7 @@ public class T2_MultipleCatchblock {
         String s = null;
         int arr[] = new int[5];
         try {
-            j = i / 0;
+            // j = i / 0;
             System.out.println(s.length());
             System.out.println(arr[5]);
         } catch (ArithmeticException e) {
@@ -16,6 +16,9 @@ public class T2_MultipleCatchblock {
             System.out.println("dont cross your limeit");
         } catch (Exception e) {
             System.out.println(e);
+        }
+        finally{
+            System.out.println("hii how are you ");
         }
 
         /*

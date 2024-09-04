@@ -7,7 +7,7 @@ interface Car {
     public void type();
 
     public void run();
-
+ int a=10;// in interface the variable is static and final so we have to insializze and give the value at same time;
     public static void add()
     {
         System.out.println("adding number");
