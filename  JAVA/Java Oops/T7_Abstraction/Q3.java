@@ -1,6 +1,5 @@
 package T7_Abstraction;
 
-import T4_Constructor.constructor;
 
 abstract class Shape{
     abstract public double calculateArea();

@@ -22,3 +22,19 @@ Advantages of Encapsulation:
 >Testing code is easy: Encapsulated code is easy to test for unit testing.
 >Increased Flexibility: We can make the variables of the class read-only or write-only depending on our requirements. 
 If we wish to make the variables read-only then we have to omit the setter methods like setName(), setAge(), etc.
+
+
+//Real Life Example of the Encapsulation
+
+1. Car Steering System:
+Private Data: The complex mechanisms of how the engine works, how the wheels turn, how the brakes apply, etc., are hidden from the driver.
+Public Interface: The steering wheel, accelerator, and brake pedal are the interfaces through which the driver controls the car. You don’t need to know the internal workings to drive the car; you just interact with these public controls.
+2. Smartphone:
+Private Data: The internal operations of apps, battery management, and processing are hidden from the user.
+Public Interface: Users interact with the phone through a touch screen and buttons. The system hides complex details like how the operating system runs or how data is processed.
+3. Medical Prescription:
+Private Data: The exact chemical composition of medicines, the manufacturing process, and how the body processes the drug are hidden.
+Public Interface: The doctor prescribes the medicine, and the patient only needs to know the dosage and timing. The underlying medical science is abstracted away from the patient.
+4. Air Conditioner:
+Private Data: How the internal mechanisms, such as the compressor and refrigerant, work is hidden from the user.
+Public Interface: The user only interacts with a remote control to set the temperature, change modes, or turn it on/off. The complexity of how it cools the air is encapsulated.

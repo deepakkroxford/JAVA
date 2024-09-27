@@ -1,4 +1,8 @@
 package T9_Inheritance;
+
+
+
+
 class Superclass {
     public void makeSound() {
         System.out.println("sound.....");
@@ -11,7 +15,7 @@ class Baseclass extends Superclass {
         System.out.println("meow.....");
     }
 }
-
+//parent class
 class Vehicle {
     double price;
     double milage;
@@ -25,7 +29,9 @@ class Vehicle {
     }
 }
 
+// extend keyword is used to inherit the property of the parent class
 class Car extends Vehicle {
+
     String fueltype;
     boolean sunroof;
     String brand;
@@ -49,9 +55,7 @@ public class I0_InheritanceImplementation {
          * "Repairing a car".
          */
 
-        Baseclass obj = new Baseclass();
-        obj.makeSound();
-        
+       
         
        //using base class name"Car" we can access the Superclass name"Vechile" method drives();
         Car obj1 = new Car();
