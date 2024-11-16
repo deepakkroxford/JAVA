@@ -7,6 +7,27 @@ import java.util.TreeMap;
 
 public class MapImplementation {
     public static void main(String[] args) {
+        /*
+         * So The initial capacity of the map is -> 16
+         * 
+         * How HashMap works internally?
+         * 
+         * sol-> When we create the hashMap it creates a array of bucket like structure
+         * internally and intial size is
+         * of the bucket is 16.....
+         * Each bucket considered as the linkedlist and the linked list contains the
+         * nodes...
+         * 
+         * when we put the elements in the hashmap so it internally calulates the
+         * hascode and
+         * this hashcode will be used for calculating the index value where we store the
+         * key
+         * 
+         * So then at that index the node will be created and that node contains the
+         * information about the
+         * hashcode , key , value , next .....
+         */
+
         HashMap<Integer, Integer> map = new HashMap<>();
         int arr[] = { 1, 2, 1, 1, 1, 1, 2, 2, 2, 5, 3, 2, 5, 1, 4, 23, 23, 45, 2, 3, 5, 6, 7, 7 };
 
@@ -26,7 +47,6 @@ public class MapImplementation {
 
         /*
          * The insertion order is not maintained
-         * It takes the value of key and value
          * 
          * Hashmap can not store the duplicate key
          * but it can store the duplicate value..
