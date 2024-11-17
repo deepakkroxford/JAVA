@@ -1,4 +1,4 @@
-package T15_WrapperClass;
+
 
 public class Implementation {
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class Implementation {
         System.out.println(f+g);
 
 
-        //Atoboxing
+        //Auto-boxing
         /*
          * In Auto-boxing we take the primitive value and store into the wrapper object so that concept is called autoboxing
          */

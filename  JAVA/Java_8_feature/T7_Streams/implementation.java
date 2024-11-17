@@ -1,11 +1,11 @@
-package Java_8_feature.T7_Streams;
+
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class implementation {
-    public static void main(String[] args) {
+    public static void main(String ...args) {
         List<Integer> l = Arrays.asList(10, 20, 30, 40, 2, 19, 2, 11, 2, 3, 4, 5, 6);
         // i want to return the the number of list that is greter tha 10
         List<Integer> filteredList = l.stream()

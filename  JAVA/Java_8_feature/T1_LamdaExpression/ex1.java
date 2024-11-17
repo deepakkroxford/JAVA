@@ -1,4 +1,3 @@
-package Java_8_feature.T1_LamdaExpression;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,8 +32,9 @@ public class ex1 {
 
       //their is no extra .class file will be generated for the lambda expression
 
-      Greeting greeting =(S)->System.out.println("hello "+S);
+      Greeting greeting =(String S)->System.out.println("hello "+S);
       greeting.sayHello("world");
+      
 
     }
 }

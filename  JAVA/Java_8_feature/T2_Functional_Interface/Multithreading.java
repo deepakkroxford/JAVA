@@ -1,5 +1,3 @@
-package Java_8_feature.T2_Functional_Interface;
-
 class Hii implements Runnable
 {
     @Override

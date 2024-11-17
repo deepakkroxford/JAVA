@@ -15,7 +15,8 @@ Feature of Java 8
 
 
 What is Lambda Expression?
-Ans: The lambda expression is a ananomas function or method. It is used to concise the code or reduce the size of code make it more interactive.
+Ans: The lambda expression is a ananomas function or method. It is used to concise the code or reduce the size 
+of code make it more interactive.
 
 Step to make any function Lambda expression ?
 The Lambda Expression has no return type.

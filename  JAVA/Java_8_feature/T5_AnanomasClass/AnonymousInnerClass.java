@@ -1,4 +1,3 @@
-package Java_8_feature.T5_AnanomasClass;
 
 class A {
     public void show() {

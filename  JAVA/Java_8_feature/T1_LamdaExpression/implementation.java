@@ -1,16 +1,11 @@
-package Java_8_feature.T1_LamdaExpression;
-
 import java.util.ArrayList;
 
 @FunctionalInterface
 // using lambda expression we can directy use the abstract method we do not need
-// to make the
-// extra class for its implementation
+// to make the extra class for its implementation
 interface car {
     void run();
 }
-
-
 
 /**
  * Innerimplementation
