@@ -30,7 +30,7 @@ By changing the data type
 
  Java provides some pre-defined methods, such as System.out.println()
 
- Naming a Method
+Naming a Method
 
 While defining a method, remember that the method name must be a verb and start with a lowercase letter.
 If the method name has more than two words, the first name must be a verb followed by adjective or noun.
@@ -59,6 +59,13 @@ method runs in the background that is already stored in the library.
 Each and every predefined method is defined inside a class. Such as print() method is defined in the java.io.PrintStream class.
 It prints the statement that we write inside the method. For example, print("Java"), it prints Java on the console.
 
+
+User defined methods:
+In the java we can also define our own methods accoring to the nedds or use . The mehods that are designed by user and it is called 
+user defined methods. In the userdefined methods we can write the complex statements as per our requirements..
+
+
+
 ***  Method Overriding: **
 
 Method overriding occurs when a subclass provides a specific implementation of a method that is already defined in its superclass.
@@ -69,14 +76,17 @@ Key Points:
 >Used to provide specific implementation of a method that is already defined in its superclass.
 >The method in the subclass must have the same name, return type, and parameter list as the method in the superclass.
 >Allows runtime polymorphism.
+>Static methods cannot be overridden
 >Only instance methods (non-static methods) can be overridden.
 >The @Override annotation is often used to indicate that a method is intended to override a method in the superclass.
 
-Static Methods
+Static Methods:-
+
 Static methods belong to the class itself rather than any particular instance of the class. 
 They can be called without creating an instance of the class. ***Static methods cannot be overridden*** because
 they are not associated with instances of the class. Instead, they can be hidden by another static method in a subclass,
 a concept known as "method hiding."
+we can call the static method directly using the class name..
 
 Example of Overriding Instance Methods:
 class Animal {
@@ -125,7 +135,8 @@ public class Test {
 }
 
 
-**** important ****
+**** important point for the interview  ****
+
 >Static methods can not be overridden.  
  
 >Final methods can not be overridden.  
@@ -133,7 +144,13 @@ public class Test {
 >Private methods can not be overridden.  
  
 >A constructor can not be overridden.
+
+>we can overload the private method 
+
+>we can overload the static  methods
+
 In Java, constructors cannot be overridden because they are not inherited like regular methods.
 However, you can achieve similar behavior through constructor chaining, where a subclass constructor
-calls a superclass constructor.
+calls a superclass constructor. we can achieve using the super key word where we can call the super class
+constructor in the subclass constructor.
  

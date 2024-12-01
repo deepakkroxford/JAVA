@@ -1,4 +1,4 @@
-package Java_8_feature.T2_Functional_Interface;
+
 
 //creation of functional interface in java
 @FunctionalInterface

@@ -10,7 +10,8 @@ Benefits
 
 
 Stream Vs Collection
-Streams and collections are fundamental concepts in Java for handling data, but they serve different purposes and have distinct characteristics. Here’s a detailed comparison between streams and collections:
+Streams and collections are fundamental concepts in Java for handling data, but they serve different purposes
+and have distinct characteristics. Here’s a detailed comparison between streams and collections:
 
 Collections
 

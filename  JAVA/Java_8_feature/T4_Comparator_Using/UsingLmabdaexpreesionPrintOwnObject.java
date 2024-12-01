@@ -1,4 +1,3 @@
-package Java_8_feature.T4_Comparator_Using;
 
 import java.util.ArrayList;
 import java.util.Collections;

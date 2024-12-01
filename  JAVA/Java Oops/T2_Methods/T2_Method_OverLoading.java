@@ -19,7 +19,7 @@ class Calculate{
 }
 class privatee{
 
-    //we can overload the static but not the private method 
+ //we can overload the static but not the private method 
   public static int add(int a, int b)
   {
     return a+b;

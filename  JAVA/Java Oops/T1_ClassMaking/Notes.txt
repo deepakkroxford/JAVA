@@ -2,7 +2,9 @@
     Ans-> In simple words, a class is a blueprint or template for creating objects in programming.
     It defines a set of attributes (data) and methods (functions) that the objects created from 
     the class will have.
-
+      
+     ***  Class doesnt take space in the memory.
+      
     Key Points:
     Attributes: These are the characteristics or properties of the class.
     For example, in a Car class, attributes might include color, model, and year.
