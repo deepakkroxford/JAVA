@@ -2,14 +2,21 @@ package T9_Inheritance;
 
 
 
-
+//parent class
 class Superclass {
+
+    //parent class methods 
     public void makeSound() {
         System.out.println("sound.....");
     }
+
 }
 
+//child class 
 class Baseclass extends Superclass {
+
+
+    //child class method 
     @Override
     public void makeSound() {
         System.out.println("meow.....");
