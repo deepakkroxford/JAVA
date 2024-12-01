@@ -18,6 +18,7 @@ internal state remains consistent.
 Encapsulation can be achieved by Declaring all the variables in the class as private and writing public methods in the class to set and get the values of variables.
 
 Advantages of Encapsulation:
+
 >Reusability:Encapsulation also improves the re-usability and is easy to change with new requirements.
 >Testing code is easy: Encapsulated code is easy to test for unit testing.
 >Increased Flexibility: We can make the variables of the class read-only or write-only depending on our requirements. 
@@ -33,6 +34,7 @@ Public Interface: The steering wheel, accelerator, and brake pedal are the inter
 Private Data: The internal operations of apps, battery management, and processing are hidden from the user.
 Public Interface: Users interact with the phone through a touch screen and buttons. The system hides complex details like how the operating system runs or how data is processed.
 3. Medical Prescription:
+
 Private Data: The exact chemical composition of medicines, the manufacturing process, and how the body processes the drug are hidden.
 Public Interface: The doctor prescribes the medicine, and the patient only needs to know the dosage and timing. The underlying medical science is abstracted away from the patient.
 4. Air Conditioner:

@@ -12,6 +12,8 @@ In Java Polymorphism is mainly divided into two types:
 >Runtime Polymorphism
 
 ** Meaning of CompileTime **
+
+
 Compile time refers to the phase in software development when the source code is converted into executable code by a compiler.
 This is the period when the compiler checks the code for syntax errors, type checking, and other compile-time errors.
 If the code passes these checks, the compiler generates the bytecode or machine code that can be executed by a computer.
@@ -23,7 +25,9 @@ Type Checking:
 The compiler verifies that all the data types are used correctly and that type conversions are valid.
 
 Semantic Analysis:
-This involves checking for semantic errors, ensuring that the code makes sense and adheres to the language's semantic rules (e.g., variable declarations before use, proper method signatures, etc.).
+
+This involves checking for semantic errors, ensuring that the code makes sense and adheres to the language's 
+semantic rules (e.g., variable declarations before use, proper method signatures, etc.).
 
 Code Optimization:
 The compiler may perform optimizations to improve the performance of the resulting executable code.
@@ -46,6 +50,7 @@ It occurs when multiple methods in the same class have the same name but differe
 The method to be called is determined at compile time based on the method signature.
 
 Operator Overloading:
+
 Some languages like C++ support operator overloading where operators are given new functionality for user-defined data types.
 Java does not support operator overloading.
 
