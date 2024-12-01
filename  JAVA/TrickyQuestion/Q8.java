@@ -22,12 +22,19 @@ class loading{
         load("deepak");
         load("deepak",10);
     }
+   
 }
 public class Q8 {
     public static void main(String[] args) {
        loading l = new loading();
        l.setdat();
+        System.out.println("inside the main method");
+       main(args, 0);
 
+    }
+
+    public static void main(String[] args, int x ){
+        System.out.println("main method is overloaded");
     }
     
 }

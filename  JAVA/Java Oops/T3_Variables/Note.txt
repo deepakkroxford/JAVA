@@ -6,7 +6,8 @@ In Java, Variables are the data containers that save the data values during Java
 >The value stored in a variable can be changed during program execution.
 >Variables in Java are only a name given to a memory location.
 >All the operations done on the variable affect that memory location.
->In Java, all variables must be declared before use.
+>In Java, all variables must be declared before use. This is beacuse the java is staic type language not dynamic.
+
 
 
 **Types of Variables in Java**
@@ -16,13 +17,15 @@ Now let us discuss different types of variables  which are listed as follows:
 3.Static Variables
 
 ** Local Variables **
-
+>local variables are store in the stack memory.. (important point regarding the interview)
 > local variable are declare within the block ,construcotr, block. this variable are only 
-  accessible within the scope in which they define. ** Once the block is exited, the local variable is no longer accessible.**
+   accessible within the scope in which they define. 
+** Once the block is exited, the local variable is no longer accessible.**
 >Before using the local variable we have to assign them.
 >local variable has no default value. whatever the value we assign it is the value of local variable.
->local variable can not be static or non-static
->Local variables are not accessible from other methods or blocks. They are private to the block in which they are defined.
+>local variable can not be static.
+>Local variables are not accessible from other methods or blocks. 
+...They are private to the block in which they are defined.
 
 
 ** Instance Variables **
@@ -45,16 +48,22 @@ Sharing Information Within an Object: Methods within the same object can share i
 
 ** Static Variables **
 
+>static variable are sotred in the method area (part of the jvm memory)
 > Memory allocation for the static variable happend in the metaspace.
 >These variables are declared similarly to instance variables. The difference is that static variables are declared using the
  static keyword within a class outside of any method, constructor, or block.
->Unlike instance variables, we can only have one copy of a static variable per class, irrespective of how many objects we create. 
+>Unlike instance variables, we can only have one copy of a static variable per class, irrespective of how many objects we create.
+
+* Static variables are shared across all instances of a class and are associated with the class itself,
+  not with any specific object.
+
 >Static variable can acess using the Class name. we can acess through the object but access through the class is the rightway
 >Static belongs to the Class not to the objects
 >Initialization of a static variable is not mandatory. Its default value is dependent on the data type of variable.
  For String it is null, for float it is 0.0f, for int it is 0, for Wrapper classes like Integer it is null, etc.
 >If we access a static variable like an instance variable (through an object), the compiler will show a warning message, which won’t halt the program.
 The compiler will replace the object name with the class name automatically.
+
 >Memory allocation for the static variable is happend only one when the class is loaded.but for instance variable the memory allocation
 happend when the object created.
 
@@ -62,3 +71,6 @@ for example we want to store the name of ceo of company so it is common for all 
 or for principle or any specific branch hod like that.
 
 In summary, static variables are used when you need to have a common property shared across all instances of a class. 
+
+..like we have to take the name of the studend so name should be diffrent or same but the principle of the college is same for the all 
+student so in case we can use the static variable .

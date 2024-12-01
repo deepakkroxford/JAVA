@@ -33,7 +33,7 @@ class mobilex {
 public class V4_Static_Method {
 
     /*
-     * importatn point
+     * important point
      * main method is static because it is a starting point of the execution of the
      * program
      * if we make as non static so we have to create a object of the the class.
