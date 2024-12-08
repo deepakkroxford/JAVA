@@ -1,0 +1,60 @@
+What is FIle Handling ?
+Sol:-
+FILE Handling refers to the process of creation, opening, reading,
+writing and managing files on a computer. It allows program to store the 
+data permanently, retrive it later and perform operations
+like editing or deleting.
+
+For example:
+Creating a file :Making a new file to store the information 
+Reading a file :Accessing the contents of a file to view or use the data 
+Writing to a file :Adding or modifying content in a file.
+Deleting a File :Removing a file from storage.
+
+
+Yes, you're correct! Using BufferedReader and BufferedWriter is often a better choice because:
+
+Efficiency: They use a buffer to minimize the number of direct read/write operations on the disk, improving performance when handling larger files.
+Convenience: They provide more user-friendly methods for handling text, like readLine() for reading entire lines.
+Reduced Resource Usage: They reduce the number of I/O operations by working with chunks of data, making them more efficient.
+import java.io.*;
+
+public class FileHandlingBuffered {
+    public static void main(String[] args) throws Exception {
+        File file = new File("abc.txt");
+
+        // Check if the file exists
+        System.out.println(file.exists());
+        file.createNewFile();
+        System.out.println(file.exists());
+
+        // Writing to the file using BufferedWriter
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        writer.write("Hello World");
+        writer.newLine(); // Adds a new line
+        writer.write("This is an example of BufferedWriter.");
+        writer.close(); // Close the writer to save changes
+
+        // Reading the file using BufferedReader
+        BufferedReader reader = new BufferedReader(new FileReader(file));
+        String line;
+        while ((line = reader.readLine()) != null) { // Read line by line
+            System.out.println(line);
+        }
+        reader.close(); // Close the reader
+    }
+}
+
+
+Benefits in this Example:
+BufferedWriter: Allows you to write strings or lines of text more conveniently and efficiently.
+
+newLine() simplifies adding line breaks.
+Data is written in chunks, reducing the overhead of direct memory access.
+BufferedReader: Allows reading the file line by line instead of character by character.
+
+readLine() simplifies reading large text files.
+No need to manually handle end-of-file (-1) conditions.
+
+
+
