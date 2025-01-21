@@ -1,0 +1,49 @@
+The terms Collection and Collections are different concepts in Java, and they are often confused due to their similar names. Here’s the distinction:
+
+1. Collection (Interface):
+	•	Definition: Collection is a root interface in the Java Collections Framework (part of java.util package). It defines the basic structure for data collections (e.g., lists, sets, queues).
+	•	Key Features:
+	•	It is part of the hierarchy that other interfaces like List, Set, and Queue extend.
+	•	Provides methods like add(), remove(), size(), iterator(), etc.
+	•	Examples of Subinterfaces:
+	•	List (e.g., ArrayList, LinkedList)
+	•	Set (e.g., HashSet, TreeSet)
+	•	Queue (e.g., PriorityQueue, LinkedList)
+	•	Usage:
+
+Collection<String> collection = new ArrayList<>();
+collection.add("Hello");
+collection.add("World");
+System.out.println(collection.size()); // Output: 2
+
+2. Collections (Class):
+	•	Definition: Collections is a utility class in the Java Collections Framework that provides static methods to operate on or return collections (e.g., sorting, searching, shuffling, making collections unmodifiable).
+	•	Key Features:
+	•	Contains helper methods to manipulate or enhance collections.
+	•	Common methods include sort(), reverse(), shuffle(), synchronizedList(), etc.
+	•	Usage:
+
+List<Integer> list = new ArrayList<>();
+list.add(3);
+list.add(1);
+list.add(2);
+
+// Sort the list
+Collections.sort(list);
+System.out.println(list); // Output: [1, 2, 3]
+
+// Reverse the list
+Collections.reverse(list);
+System.out.println(list); // Output: [3, 2, 1]
+
+Key Differences:
+
+Aspect	Collection	Collections
+Type	Interface	Utility class
+Purpose	Defines basic structure and behavior of data	Provides helper methods to manipulate data
+Hierarchy	Parent interface for List, Set, Queue	No hierarchy (final class with static methods)
+Examples	List, Set, Queue	Collections.sort(), Collections.shuffle()
+
+Summary:
+	•	Use Collection when defining or working with groups of objects (e.g., List, Set).
+	•	Use Collections when you need to manipulate or enhance a collection with utility methods.
