@@ -103,3 +103,42 @@ finalize is a method in java which is used to perform clean up processing just b
 finalize() method is used with the objects.
 finalize method performs the cleaning activities with respect to the object before its destruction.
 finalize method is executed just before the object is destroyed.
+
+lets take an example so we can understand the finalize method, so finalize method call by the grabge collecter.
+so if method has some connection like netwoek coonection or data based connection so first it clean up the code and then 
+destroyed the object..
+
+Can we use the try block without the catch block?
+Solution: Yes, you can use the try block without the catch block, but it must be followed by a finally block. The syntax ensures proper resource cleanup even if an exception occurs. For example:
+
+java
+Copy
+Edit
+try {
+    // Code that may throw an exception
+} finally {
+    // Cleanup code
+}
+
+Can we use the try block without the catch block?
+Solution: Yes, you can use the try block without the catch block, but it must be followed by a finally block. The syntax ensures proper resource cleanup even if an exception occurs. For example:
+
+java
+Copy
+Edit
+try {
+    // Code that may throw an exception
+} finally {
+    // Cleanup code
+}
+
+Can we use multiple try blocks without the catch block?
+Solution: No, you cannot have multiple try blocks without a catch or finally block.
+Each try block must be followed by at least one catch or finally block to handle or ensure cleanup of resources.
+
+Types of exceptions in Java:
+Solution: There are three main types of exceptions in Java:
+
+Checked Exceptions: Exceptions that are checked at compile time (e.g., IOException, SQLException).
+Unchecked Exceptions: Exceptions that are not checked at compile time and occur during runtime (e.g., NullPointerException, ArithmeticException).
+Errors: These are serious issues that are not intended to be caught or handled by applications (e.g., OutOfMemoryError, StackOverflowError).

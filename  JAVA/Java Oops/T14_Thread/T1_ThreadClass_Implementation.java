@@ -1,4 +1,4 @@
-package T14_Thread;
+
 
 /*
  * we can make thread in two ways the 

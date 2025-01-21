@@ -13,7 +13,7 @@ public class T2_MultipleCatchblock {
         } catch (ArithmeticException e) {
             System.out.println("dont divide by zero");
         } catch (ArrayIndexOutOfBoundsException a) {
-            System.out.println("dont cross your limeit");
+            System.out.println("dont cross your limit");
         } catch (Exception e) {
             System.out.println(e);
         }

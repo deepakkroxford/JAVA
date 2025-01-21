@@ -3,7 +3,6 @@
 public class Implementaion2 {
     public static void main(String[] args) {
         // Java Program to convert all primitives into its corresponding
-
         // wrapper objects and vice-versa
         byte b = 10;
         short s = 20;

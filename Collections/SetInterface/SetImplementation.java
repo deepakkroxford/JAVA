@@ -69,6 +69,7 @@ public class SetImplementation {
         ts.add(16);
         ts.add(50);
         ts.add(10); // Duplicates are automatically removed
+        ts.add(null); // Null values are not allowed in the TreeSet
 
         /*
          * Insertion order is not maintained

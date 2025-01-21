@@ -1,4 +1,4 @@
-package T14_Thread;
+
 
 class A extends Thread{
   

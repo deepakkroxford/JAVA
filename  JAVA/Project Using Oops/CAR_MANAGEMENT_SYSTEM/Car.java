@@ -1,4 +1,3 @@
-package CAR_MANAGEMENT_SYSTEM;
 
 import java.util.Scanner;
 

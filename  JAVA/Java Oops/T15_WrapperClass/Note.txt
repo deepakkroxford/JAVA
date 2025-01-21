@@ -1,5 +1,6 @@
 Need Of Wrapper Class
-1.Conversion Between Primitive Types and Objects: Wrapper classes encapsulate primitive data types (like int, float, boolean) into objects.
+1.Conversion Between Primitive Types and Objects: Wrapper classes encapsulate primitive data types
+(like int, float, boolean) into objects.
 This allows these primitive types to be used in contexts where objects are required,
 such as in collections (like ArrayList) or when dealing with generics.
 

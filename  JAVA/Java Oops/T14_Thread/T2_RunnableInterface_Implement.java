@@ -1,4 +1,3 @@
-package T14_Thread;
 
 //the runnable is a interface and its has a abstract method called run () that we are implementing
 class Myrunnable implements Runnable{
