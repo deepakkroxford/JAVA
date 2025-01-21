@@ -69,7 +69,8 @@ public class MapImplementation {
         ht.put(1, 30); // it will override the previous value
         System.out.println(ht);
 
-        // ht.put(null, 10); //it will give the error message not allowed in the hashmap
+        // ht.put(null, 10); //it will give the error message not allowed in the hashtable
+        //ht.put(4,null);  it will give the error null values is also not allowed in hashtable
 
         /*
          * The insertion order is not maintained.
