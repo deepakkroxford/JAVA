@@ -7,7 +7,10 @@ class A extends Thread{
         for(int i=1;i<=10;i++)
         {
             System.out.println("hii brother");
+    
 
+            // 
+            //fsmdm
             // this mean  after executing one time it wait for 3000 milisecond 
             try {
                 Thread.sleep(3000);

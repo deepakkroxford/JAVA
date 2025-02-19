@@ -1,6 +1,3 @@
-package T8_Static_v_Instance_Block.T18_Static_vs_InstanceMethod.java;
-
-
 
 public class OrderOfexecution {
     static {

@@ -1,4 +1,4 @@
-package T8_Static_v_Instance_Block.T18_Static_vs_InstanceMethod.java;
+
 
 class Bom {
     static int var;

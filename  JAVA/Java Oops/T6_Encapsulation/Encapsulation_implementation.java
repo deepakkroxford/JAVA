@@ -1,5 +1,4 @@
-package T6_Encapsulation;
-
+import java.util.*;
 class Persons {
     // we make this instance variable as a private so we can not access out side the
     // class making the object of the class
@@ -36,7 +35,7 @@ class Persons {
     }
 
     public void printinfo() {
-        System.out.println(getName() + " " + getSalary() + " " + getdep());
+        System.out.println(getName() + " " + getSalary() + " " +getdep());
     }
 }
 
