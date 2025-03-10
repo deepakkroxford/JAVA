@@ -139,7 +139,7 @@ public class Test {
 
 >Static methods can not be overridden.  
  
->Final methods can not be overridden.  
+>Final methods can not be overridden but final method can be overload.  
  
 >Private methods can not be overridden.  
  
