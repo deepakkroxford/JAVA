@@ -1,5 +1,4 @@
 
-
 /*
  * we can make thread in two ways the 
  * first one is extending thread class and

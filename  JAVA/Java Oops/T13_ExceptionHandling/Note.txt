@@ -53,7 +53,6 @@ throw new ArithmeticException("/ by zero");
 THROWS KEYWORD
 The thows keyword indicate that the block of code can give the exception so the user that is using they have to handel it .
 
-
 Final: It is a keyword
 This is an important question concerning the interview point of view.
 final keyword
@@ -121,11 +120,10 @@ try {
 }
 
 Can we use the try block without the catch block?
-Solution: Yes, you can use the try block without the catch block, but it must be followed by a finally block. The syntax ensures proper resource cleanup even if an exception occurs. For example:
+Solution: Yes, you can use the try block without the catch block, but it must be followed by a finally block. 
+The syntax ensures proper resource cleanup even if an exception occurs. For example:
 
-java
-Copy
-Edit
+
 try {
     // Code that may throw an exception
 } finally {
