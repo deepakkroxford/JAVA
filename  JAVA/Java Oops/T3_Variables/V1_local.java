@@ -1,5 +1,4 @@
 package T3_Variables;
-
 public class V1_local {
     public static void main(String[] args) {
          // this are the local variable in java

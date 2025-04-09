@@ -53,3 +53,9 @@ public class Main {
 Output
 Parent constructor
 Child constructor
+
+
+Q What is Copy constructor?
+sol:- A copy constructor in java is a special constructor that create a new object by cloning the value from the 
+another object of the same class.
+Java does not provide a built in copy constructor like c++ but you can make it our own copy constructor.

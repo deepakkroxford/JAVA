@@ -1,5 +1,3 @@
-package T14_Thread;
-
 class z {
     public void good() {
         System.out.println("hiii");

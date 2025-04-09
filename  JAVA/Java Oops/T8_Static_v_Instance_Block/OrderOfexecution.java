@@ -30,6 +30,9 @@ public class OrderOfexecution {
          * • Static initialization blocks run first when the class is loaded.
          * • Instance initialization blocks run before the constructor, each time an
          * instance of the class is created.
+         * 
+         * Instance block start running when we create the object of the class. Each time when we create the 
+         * object it will run .
          */
     }
 }

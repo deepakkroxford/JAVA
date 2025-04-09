@@ -1,5 +1,3 @@
-
-
 class Bom {
     static int var;
     static {

@@ -22,4 +22,4 @@ Use enums when you have values that you know aren't going to change, like month 
  days, colors, deck of cards,projecy status like Active ,end ,Progress etc.
 
 Enum values are final when you assing u can not modify the value ...
-We can create the object of enum but no new keyword is required 
+We can not create the object of the enum class but if we want to access the value we can acess using dot operator.

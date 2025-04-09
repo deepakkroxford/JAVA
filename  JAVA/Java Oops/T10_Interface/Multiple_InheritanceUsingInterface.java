@@ -1,4 +1,4 @@
-package T10_Interface;
+
 interface a{
    public void run();
 }

@@ -1,5 +1,3 @@
-package T10_Interface;
-
 interface Car {
     // all the method shoud be public or defalut. We can also make the
     // private method from the java 9. But we can not make the protected method
