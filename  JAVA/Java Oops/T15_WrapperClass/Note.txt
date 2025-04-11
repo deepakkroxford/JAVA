@@ -1,3 +1,20 @@
+What is Wrapper Class?
+Wrapper classes in Java are classes that encapsulate primitive data types (like int, char, boolean etc.) into objects. Each primitive type in Java has a corresponding wrapper class:
+
+- int -> Integer
+- char -> Character
+- boolean -> Boolean
+- byte -> Byte
+- short -> Short
+- long -> Long
+- float -> Float
+- double -> Double
+
+These wrapper classes are part of the java.lang package and provide various utility methods to work with primitive data types. They allow primitive types to be used in object-oriented contexts where objects are required, such as in collections or generics.
+
+
+
+
 Need Of Wrapper Class
 1.Conversion Between Primitive Types and Objects: Wrapper classes encapsulate primitive data types
 (like int, float, boolean) into objects.
@@ -14,3 +31,48 @@ For example, Integer provides methods like parseInt() for parsing strings to int
 
 4.Compatibility with Generics:
 Generics in Java do not support primitive types directly. Using wrapper classes allows primitive types to be used with generics
+
+
+Important Conversion Methods:
+
+1. String to Primitive:
+   - Integer.parseInt(String s)
+   - Double.parseDouble(String s)
+   - Boolean.parseBoolean(String s)
+   - Long.parseLong(String s)
+   - Float.parseFloat(String s)
+
+2. Primitive to String:
+   - Integer.toString(int i)
+   - Double.toString(double d)
+   - Boolean.toString(boolean b)
+   - Long.toString(long l)
+   - Float.toString(float f)
+
+3. Primitive to Wrapper Object (Autoboxing):
+   - Integer.valueOf(int i)
+   - Double.valueOf(double d)
+   - Boolean.valueOf(boolean b)
+   - Long.valueOf(long l)
+   - Float.valueOf(float f)
+
+4. Wrapper Object to Primitive (Unboxing):
+   - intValue()
+   - doubleValue()
+   - booleanValue()
+   - longValue()
+   - floatValue()
+
+5. Wrapper Object to String:
+   - Integer obj.toString()
+   - Double obj.toString()
+   - Boolean obj.toString()
+   - Long obj.toString()
+   - Float obj.toString()
+
+6. String to Wrapper Object:
+   - Integer.valueOf(String s)
+   - Double.valueOf(String s)
+   - Boolean.valueOf(String s)
+   - Long.valueOf(String s)
+   - Float.valueOf(String s)
