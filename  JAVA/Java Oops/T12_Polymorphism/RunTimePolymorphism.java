@@ -36,7 +36,30 @@ class peacock extends dog {
 }
 
 public class RunTimePolymorphism {
+    /**
+     * Demonstrates runtime polymorphism in Java.
+     * 
+     * Key Concepts:
+     * 1. Method Overriding:
+     *    - A subclass provides a specific implementation of a method already defined in its superclass.
+     *    - The method in the subclass must have the same name, return type, and parameters as the method in the superclass.
+     *    - The overridden method in the subclass is called at runtime, based on the actual object type.
+     * 
+     * 2. Polymorphism:
+     *    - A superclass reference can point to a subclass object.
+     *    - The method that gets executed is determined by the actual object type, not the reference type.
+     * 
+     * 3. Compile-Time Restrictions:
+     *    - A reference variable can only access methods defined in its declared type.
+     *    - If a subclass-specific method is called using a superclass reference, it will result in a compile-time error.
+     * 
+     * Example Flow:
+     * - An `Animal` reference is used to call the `sound` method, which is overridden in `car` and `dog` subclasses.
+     * - A `dog` reference is used to call both `sound` and `dance` methods, demonstrating subclass-specific behavior.
+     * - Attempting to assign a `car` object to a `dog` reference results in a compile-time error, as `car` is not a subclass of `dog`.
+     */
     public static void main(String[] args) {
+
         Animal obj = new Animal();
         obj.sound(); // Animal makes a sound
         obj = new car();
