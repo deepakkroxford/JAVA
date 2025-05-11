@@ -23,7 +23,6 @@ class dog extends Animal {
     }
 }
 
-
 class peacock extends dog {
     @Override
     public void sound() {
@@ -34,7 +33,6 @@ class peacock extends dog {
         System.out.println("Peacock dances");
     }
 }
-
 public class RunTimePolymorphism {
     /**
      * Demonstrates runtime polymorphism in Java.

@@ -1,4 +1,4 @@
-package T9_Inheritance;
+
 
 class Shape {
     public int getArea() {
