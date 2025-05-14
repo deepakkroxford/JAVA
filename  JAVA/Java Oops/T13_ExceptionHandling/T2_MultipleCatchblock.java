@@ -16,8 +16,7 @@ public class T2_MultipleCatchblock {
             System.out.println("dont cross your limit");
         } catch (Exception e) {
             System.out.println(e);
-        }
-        finally{
+        } finally {
             System.out.println("hii how are you ");
         }
 
