@@ -41,10 +41,12 @@ public class constructor_overloading {
         obj1.age = 23;
         obj1.printinfor();
 
-        // it will call the default constructor
+        // it will call the constructor which take one parameter
         Persons obj2 = new Persons("sweeta singh");
         obj2.printinfor();
 
-       
+        //this will call the defalut constructor
+        Person obj3 = new Person();
+        System.out.println(obj3);
     }
 }
