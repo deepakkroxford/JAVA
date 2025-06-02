@@ -7,6 +7,15 @@ import java.util.Vector;
 
 public class ListImplementation {
     public static void main(String[] args) {
+
+        /**
+         * So the main advantage of the arraylist is that is dynamic in the size and 
+         * it can store the duplicate data and null also and insertion order is maintained.
+         * 
+         * But the problem with the arraylist is that it take contigus memory space if in the memory 
+         * there is no contiguos memory space then it will throw the arrayindexoutofbound exceptio
+         * 
+         */
         ArrayList<Integer> arr = new ArrayList<>();
         arr.add(10);
         arr.add(20);
