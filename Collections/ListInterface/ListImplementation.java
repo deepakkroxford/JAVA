@@ -12,6 +12,7 @@ public class ListImplementation {
         arr.add(20);
         arr.add(30);
         arr.add(40);
+        arr.add(8192);
         arr.add(null);
         arr.add(null);
 
@@ -38,6 +39,10 @@ public class ListImplementation {
         ll.add(32);
         ll.add(42);
         ll.add(234);
+        ll.addFirst(32);
+        ll.addLast(453);
+        ll.getFirst();
+        ll.getLast();
         ll.add(null);
         ll.add(null);
 

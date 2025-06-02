@@ -4,8 +4,7 @@ import java.util.List;
 
 @FunctionalInterface
 interface Square {
-public int square(int n);
-    
+    public int square(int n);
 }
 
 @FunctionalInterface
@@ -23,18 +22,19 @@ public class ex1 {
         fruits.add("papya");
         System.out.println(fruits);
         /*
-         * using lambda expresssion we can print the list 
+         * using lambda expresssion we can print the list
          */
-        fruits.forEach((n)->{System.out.println(n);});
+        fruits.forEach((n) -> {
+            System.out.println(n);
+        });
 
-      Square s =(int n)->n*n;
-      System.out.println(s.square(3));
+        Square s = (int n) -> n * n;
+        System.out.println(s.square(3));
 
-      //their is no extra .class file will be generated for the lambda expression
+        // their is no extra .class file will be generated for the lambda expression
 
-      Greeting greeting =(String S)->System.out.println("hello "+S);
-      greeting.sayHello("world");
-      
+        Greeting greeting = (String S) -> System.out.println("hello " + S);
+        greeting.sayHello("world");
 
     }
 }
