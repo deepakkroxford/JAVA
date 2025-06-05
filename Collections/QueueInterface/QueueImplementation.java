@@ -1,5 +1,6 @@
 package Collections.QueueInterface;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -114,5 +115,18 @@ public class QueueImplementation {
          * 
          */
 
+
+         /**
+          * In the arrayDeque we can add the element from both side .form the begingn and from the end , but we can not add]
+          the element from the middle.
+          */
+         ArrayDeque<Integer> ad = new ArrayDeque<>();
+         ad.add(10);
+         ad.add(20); 
+         ad.add(30); // it also add the element from the end
+         ad.addFirst(1212); // it add the element from the beginning
+         ad.addLast(13121); // it add the element from the end
+         ad.add(40); 
+         System.out.println(ad);
     }
 }
