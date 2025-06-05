@@ -1,0 +1,13 @@
+
+Difference Between Comprator and Comparable ?
+
+Sol:- 
+### 🔄 Summary:
+
+| Feature | Comparable | Comparator |
+| --- | --- | --- |
+| Package | `java.lang` | `java.util` |
+| Method | `compareTo(T o)` | `compare(T o1, T o2)` |
+| Sorting Logic | Single (natural ordering) | Multiple (custom ordering) |
+| Changes Required | Modifies original class | No change to original class required |
+| Flexibility | Less flexible | More flexible |
