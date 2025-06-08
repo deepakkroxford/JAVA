@@ -36,7 +36,7 @@ class SortByYear implements Comparator<Movies> {
 class SortByYearThenTitle implements Comparator<Movies> {
     public int compare(Movies m1, Movies m2) {
         int yearCompare = Integer.compare(m1.getReleaseYear(), m2.getReleaseYear());
-        if (yearCompare != 0) {  // it means two moveis have different release year so we can return yearCompare
+        if (yearCompare != 0) { // it means two moveis have different release year so we can return yearCompare
             return yearCompare;
         } else { // if two movies have same release year then we will compare their title
             return m1.getTitle().compareTo(m2.getTitle());
