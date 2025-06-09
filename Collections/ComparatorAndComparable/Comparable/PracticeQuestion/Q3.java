@@ -17,13 +17,8 @@ class Book implements Comparable<Book> {
 
     @Override
     public int compareTo(Book o) {
-        if (this.pages > o.pages) {
-            return -1;
-        } else if (this.pages < o.pages) {
-            return 1;
-        } else {
-            return 0;
-        }
+        //return this.title.compareTo(o.title);
+        return o.title.compareTo(this.title);
     }
 
     public String toString() {

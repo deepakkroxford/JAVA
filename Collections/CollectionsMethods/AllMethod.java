@@ -80,7 +80,7 @@ public class AllMethod {
             int frequency = Collections.frequency(list2, 11);
             System.out.println(frequency);
             /**
-             * disjoint() method
+             * disjoint() method 
              */
             boolean disjoint = Collections.disjoint(list2, list);
             System.out.println(disjoint);
