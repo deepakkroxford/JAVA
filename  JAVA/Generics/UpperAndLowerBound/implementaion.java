@@ -32,11 +32,11 @@ class Husky extends Dog {
 
 public class implementaion {
     
-    public static void displayLowerBound(List<? super Animal> lower) {
-        for(Object obj :  lower) {
-            System.out.println((Animal) obj);
-        }
-    }
+    // public static void displayLowerBound(List<? super Animal> lower) {
+    //     for(Object obj :  lower) {
+    //         System.out.println((Animal) obj);
+    //     }
+    // }
 
     // This is called Upper Bounded Wildcard it means what ever the animal subclass
     // we can access their
@@ -73,7 +73,7 @@ public class implementaion {
         ArrayList<Object> a3 = new ArrayList<>();
         a3.add(new Dog());
         a3.add(new Cat());
-        displayLowerBound(a3);
+       // displayLowerBound(a3);
 
         // if i need animal so i can get Dog, 
         ArrayList<? extends Animal> a = new ArrayList<Dog>(); // if we are extending so we can only access the sub class

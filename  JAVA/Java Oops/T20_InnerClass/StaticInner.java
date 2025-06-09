@@ -1,4 +1,3 @@
-package T20_InnerClass;
 
 class Computer {
     private String brand;

@@ -1,4 +1,3 @@
-package toStringMethod;
 
 class Frog {
     String name;
