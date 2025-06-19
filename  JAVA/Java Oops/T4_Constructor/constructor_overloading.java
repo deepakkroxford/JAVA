@@ -1,5 +1,3 @@
-package T4_Constructor;
-
 class Persons {
     String name;
     int age;
@@ -46,7 +44,7 @@ public class constructor_overloading {
         obj2.printinfor();
 
         //this will call the defalut constructor
-        Person obj3 = new Person();
+        Persons obj3 = new Persons();
         System.out.println(obj3);
     }
 }

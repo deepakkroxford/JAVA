@@ -1,10 +1,9 @@
-package T20_InnerClass;
 
-class Car {
+class Carr {
     private String model;
     private boolean isEngineOn;
 
-    public Car(String model) {
+    public Carr(String model) {
         this.model = model;
         this.isEngineOn = false;
     }
@@ -37,9 +36,9 @@ public class MemberInner {
     public static void main(String[] args) {
 
         //creating the class class instance 
-        Car car = new Car("Bmw m8");
+        Carr car = new Carr("Bmw m8");
         // using the outer class instance we can acces the inner class object and perform operations on it.
-        Car.Engine engine  = car.new Engine();
+        Carr.Engine engine  = car.new Engine();
         engine.start();
         engine.start();
         engine.stop();

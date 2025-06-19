@@ -143,11 +143,11 @@ public class Test {
  
 >Private methods can not be overridden.  
  
->A constructor can not be overridden.
+>A constructor can not be overridden.But using the super key word you can access the parent class constructor.
 
->we can overload the private method 
+>we can overload the private method but not override.
 
->we can overload the static  methods
+>we can overload the static  methods but not override.
 
 In Java, constructors cannot be overridden because they are not inherited like regular methods.
 However, you can achieve similar behavior through constructor chaining, where a subclass constructor

@@ -2,7 +2,6 @@
 class A {
     public void show() {
         System.out.println("in a show");
-
     }
 }
 interface X{

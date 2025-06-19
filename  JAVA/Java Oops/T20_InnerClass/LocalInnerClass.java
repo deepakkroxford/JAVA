@@ -1,5 +1,3 @@
-package T20_InnerClass;
-
 class Library {
 
     public void organizeBooks() {

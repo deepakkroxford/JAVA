@@ -1,4 +1,4 @@
-package T4_Constructor;
+
 
 class Laptop {
     String brand;
@@ -18,22 +18,22 @@ class Laptop {
     }
 }
 
-class Car {
+class Cars {
     String brand;
     int price;
 
     // Default constructor
-    public Car() {
+    public Cars() {
         this("Unknown"); // calls 1-param constructor
     }
 
     // Constructor with brand only
-    public Car(String brand) {
+    public Cars(String brand) {
         this(brand, 0); // calls 2-param constructor
     }
 
     // Constructor with brand and price
-    public Car(String brand, int price) {
+    public Cars(String brand, int price) {
         this.brand = brand;
         this.price = price;
     }
@@ -105,9 +105,9 @@ public class Q2 {
         System.out.println("Laptop 3: " + l3.brand + ", " + l3.price);
 
 
-        Car c1 = new Car(); // uses default
-        Car c2 = new Car("Toyota"); // uses 1-param
-        Car c3 = new Car("BMW", 7000000); // uses 2-param
+        Cars c1 = new Cars(); // uses default
+        Cars c2 = new Cars("Toyota"); // uses 1-param
+        Cars c3 = new Cars("BMW", 7000000); // uses 2-param
 
         c1.showDetails();
         c2.showDetails();

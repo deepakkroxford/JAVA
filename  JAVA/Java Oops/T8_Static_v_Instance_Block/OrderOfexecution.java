@@ -33,6 +33,7 @@ public class OrderOfexecution {
          * 
          * Instance block start running when we create the object of the class. Each time when we create the 
          * object it will run .
+         * Constructor start running after the instance initialization block.
          */
     }
 }

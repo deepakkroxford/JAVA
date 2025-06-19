@@ -1,0 +1,42 @@
+What is Encapsulation?
+Sol:
+Encapsulation is a fundamental concept in object-oriented programming (OOP) that refers to the bundling of data (variables) 
+and methods (functions) that operate on that data into a single unit or class.
+
+Data Hiding: 
+The internal state of an object is hidden from the outside world. Only the object's methods can directly interact with its data. 
+This is typically achieved using access modifiers like private for variables.
+
+Improved Security and Integrity: 
+By restricting direct access to an object's data, encapsulation helps maintain the integrity of the data and prevents unexpected changes from outside the object.
+
+***  Important  ****
+In Java, encapsulation is achieved by declaring the instance variables of a class as private, which means they can only be accessed within the class. 
+To allow outside access to the instance variables, public methods called getters and setters are defined, which are used to retrieve and modify the 
+values of the instance variables, respectively. By using getters and setters, the class can enforce its own data validation rules and ensure that its
+internal state remains consistent.
+Encapsulation can be achieved by Declaring all the variables in the class as private and writing public methods in the class to set and get the values of variables.
+
+Advantages of Encapsulation:
+
+>Reusability:Encapsulation also improves the re-usability and is easy to change with new requirements.
+>Testing code is easy: Encapsulated code is easy to test for unit testing.
+>Increased Flexibility: We can make the variables of the class read-only or write-only depending on our requirements. 
+If we wish to make the variables read-only then we have to omit the setter methods like setName(), setAge(), etc.
+
+
+//Real Life Example of the Encapsulation
+
+1. Car Steering System:
+Private Data: The complex mechanisms of how the engine works, how the wheels turn, how the brakes apply, etc., are hidden from the driver.
+Public Interface: The steering wheel, accelerator, and brake pedal are the interfaces through which the driver controls the car. You don’t need to know the internal workings to drive the car; you just interact with these public controls.
+2. Smartphone:
+Private Data: The internal operations of apps, battery management, and processing are hidden from the user.
+Public Interface: Users interact with the phone through a touch screen and buttons. The system hides complex details like how the operating system runs or how data is processed.
+3. Medical Prescription:
+
+Private Data: The exact chemical composition of medicines, the manufacturing process, and how the body processes the drug are hidden.
+Public Interface: The doctor prescribes the medicine, and the patient only needs to know the dosage and timing. The underlying medical science is abstracted away from the patient.
+4. Air Conditioner:
+Private Data: How the internal mechanisms, such as the compressor and refrigerant, work is hidden from the user.
+Public Interface: The user only interacts with a remote control to set the temperature, change modes, or turn it on/off. The complexity of how it cools the air is encapsulated.

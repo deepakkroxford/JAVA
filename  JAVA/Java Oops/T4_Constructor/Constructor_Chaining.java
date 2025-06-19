@@ -1,5 +1,3 @@
-package T4_Constructor;
-
 class College {
     String name;
     String branch;

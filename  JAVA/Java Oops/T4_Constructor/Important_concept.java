@@ -1,4 +1,3 @@
-package T4_Constructor;
 
  class Base {
 

@@ -1,4 +1,3 @@
-package T4_Constructor;
 
 class ImportantConcptPart2 {
     private int value;
@@ -21,7 +20,7 @@ public class ImportantConceptPart2 {
         ImportantConcptPart2 obj = new ImportantConcptPart2(10);
 
         /*
-         * While you cannot define a static method inside a constructor, you can call a
+         * While you cannot define a static method inside a constructor, but you can call a
          * static method from within a constructor if needed.
          */
     }
