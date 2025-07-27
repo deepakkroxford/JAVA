@@ -49,7 +49,8 @@ public class Mains {
          * because it is not check the value it check the memory address. so it will add.
          * 
          * When we work with the wrapper class it will check the value and does not add. because internally wrapper class 
-         * override the hashcode method of object class. But in the custom class it is not overriden. we have to explicitly override the method.
+         * override the hashcode method of object class. But in the custom class it is not overriden.
+         * we have to explicitly override the method.
          */
         LinkedHashSet<family> set = new LinkedHashSet<>();
         set.add(f1);

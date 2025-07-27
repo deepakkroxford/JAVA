@@ -1,5 +1,5 @@
 
-class A {
+class Aaa {
     public void show() {
         System.out.println("in a show");
     }
@@ -11,7 +11,7 @@ interface X{
 
 public class AnonymousInnerClass {
     public static void main(String[] args) {
-        A a = new A() {
+        Aaa a = new Aaa() {
             // this is a Anonymous class without name insted of creating new class that
             // extend A class
             // and then override the show method and give the new implementation we use the

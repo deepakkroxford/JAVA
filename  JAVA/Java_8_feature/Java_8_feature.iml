@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/T1_LamdaExpression" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T2_Functional_Interface" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T4_Comparator_Using" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T5_AnanomasClass" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/T7_Streams" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
