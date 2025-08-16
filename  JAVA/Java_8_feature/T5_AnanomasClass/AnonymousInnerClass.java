@@ -4,8 +4,10 @@ class Aaa {
         System.out.println("in a show");
     }
 }
-interface X{
+
+interface X {
     public void show();
+
     public void run();
 }
 
@@ -37,18 +39,16 @@ public class AnonymousInnerClass {
             System.out.println("main tread");
         }
 
-
-//we are using annanomas inner class to give the implementaion of the interface 
-// in this case we can not use the lambda expression becuse the interface contain two method 
-// so it means that  interface is not a functional interface
+        // we are using annanomas inner class to give the implementaion of the interface
+        // in this case we can not use the lambda expression becuse the interface
+        // contain two method
+        // so it means that interface is not a functional interface.
         X x = new X() {
-            public void show()
-            {
+            public void show() {
                 System.out.println("hii in a new show");
             }
 
-            public void run()
-            {
+            public void run() {
                 System.out.println("now i am runnig");
             }
         };
